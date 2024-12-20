@@ -1,7 +1,12 @@
+body {
+    background-color: crimson;
+}
+
 h1 {
     color: #DC56C5;
 }
-.modal {
+
+.modal  {
     display: none; 
     position: fixed;
     top: 0;
@@ -17,31 +22,43 @@ h1 {
 }
 
 .img__modal {
-    height: 140px;
-    border-radius: 50 50 50 50;
+    height: auto;
+    width: 140px;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 .modal-content {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
-    gap: 20px; 
-    width: 90%;
-    max-width: 400px; 
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    max-width: 930px;
+    height: 1023px;
+    margin: 0 auto;
     position: relative;
+    text-align: left;
 }
 
 .modal-content img {
     width: 100%; 
-    height: auto;
+    height: 641px;
     object-fit: cover; 
     border-radius: 10px; 
 }
 
+.img__modal {
+    width: 140px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-top: 235px;
+    margin-bottom: 147px;
+    margin-right: 60px;
+}
 
 .modal-info {
     display: flex;
@@ -49,8 +66,29 @@ h1 {
     gap: 10px;
     text-align: left;
     width: 100%;
+
 }
 
+.info__modal {
+    margin-top: 210px;
+}
+
+.info__modal h1 {
+    margin-bottom: 7px;
+}
+
+.info__modal p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.info__section,
+.when__section,
+.where__section,
+.who__section,
+.prices__section {
+    margin-bottom: 20px;
+}
 
 .modal-info h3 {
     margin: 0;
@@ -68,6 +106,10 @@ h1 {
     font-size: 20px;
     margin-bottom: 10px;
     color: #DC56C5;
+}
+
+.modal-info-text {
+    margin-top: 0;
 }
 
 .close-btn {
