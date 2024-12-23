@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const whoText = document.getElementById("modal-who");
     const priceStandard = document.getElementById("modal-price-standard");
     const priceVIP = document.getElementById("modal-price-vip");
-
+    const modalImg = document.getElementById("ModalImg");
 
     const eventsData = [
         {
@@ -69,11 +69,19 @@ document.addEventListener("DOMContentLoaded", () => {
             whoText.textContent = eventData.who;
             priceStandard.textContent = eventData.priceStandard;
             priceVIP.textContent = eventData.priceVIP;
+
+            // Меняем изображение для модалки
+            modalImg.src = `../img/${id}.png`;
+
+            // Убираем border-radius для модалки
+            modalImg.style.borderRadius = "0";
+
             modal.style.display = "flex";
         } else {
             console.error("Помилка", id);
         }
     };
+
     const previewImages = document.querySelectorAll(".img__preview");
     previewImages.forEach(image => {
         image.addEventListener("click", () => {
