@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const whoText = document.getElementById("modal-who");
     const priceStandard = document.getElementById("modal-price-standard");
     const priceVIP = document.getElementById("modal-price-vip");
-    const modalImg = document.getElementById("ModalImg");
 
     const eventsData = [
         {
@@ -70,11 +69,14 @@ document.addEventListener("DOMContentLoaded", () => {
             priceStandard.textContent = eventData.priceStandard;
             priceVIP.textContent = eventData.priceVIP;
 
-            // Меняем изображение для модалки
+            const modalImg = document.getElementById("ModalImg");
             modalImg.src = `../img/${id}.png`;
 
-            // Убираем border-radius для модалки
-            modalImg.style.borderRadius = "0";
+            modalImg.style.width = "360px";
+            modalImg.style.height = "641px";
+            modalImg.style.marginLeft = "30px";
+            modalImg.style.marginTop = "235px";
+            modalImg.style.marginBottom = "147px";
 
             modal.style.display = "flex";
         } else {
